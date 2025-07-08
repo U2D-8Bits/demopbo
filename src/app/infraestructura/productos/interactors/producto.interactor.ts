@@ -9,7 +9,7 @@ export class ProductoInteractor implements IProductoInteractor {
         private readonly getConsultarTodoProductosUseCase: GetConsultarTodoProductosUseCase
     ){}
 
-    public conultar(): Observable<ProductoModel[]>{
+    public consultar(): Observable<ProductoModel[]>{
         return this.getConsultarTodoProductosUseCase.execute();
     }
 
