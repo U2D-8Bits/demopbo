@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MainInterceptor } from './core/interceptors/main.interceptor';
+import { DATA_IOC } from './infraestructura/data.ioc';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MainInterceptor } from './core/interceptors/main.interceptor';
       useClass: MainInterceptor,
       multi: true
     },
+    ...DATA_IOC
   ],
   bootstrap: [AppComponent]
 })
