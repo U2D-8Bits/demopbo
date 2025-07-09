@@ -17,14 +17,17 @@ export class ProductoAdministracionComponent implements OnInit {
     this.cargarProductos();
   }
 
-  // Cargar lista de productos
+
   cargarProductos(){
     this.productoInteractor.consultar()
-      .subscribe({
-        next: (productos: ProductoModel[]) => {
-          console.log('Productos cargados:', productos);
-        }
-      })
+    .subscribe({
+      next: (productos: ProductoModel[]) => {
+        console.log('Productos cargados:', productos);
+      },
+      error: (error) => {
+        console.error('Error al cargar productos:', error);
+      }
+    })
   }
 
 }

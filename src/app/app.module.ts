@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, provideHttpClient } from '@angular/common/http';
 import { MainInterceptor } from './core/interceptors/main.interceptor';
 import { DATA_IOC } from './infraestructura/data.ioc';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -18,7 +19,9 @@ import Aura from '@primeng/themes/aura';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
+
   ],
   providers: [
     {
@@ -27,13 +30,13 @@ import Aura from '@primeng/themes/aura';
       multi: true
     },
     ...DATA_IOC,
-
-        provideAnimationsAsync(),
-        providePrimeNG({
-            theme: {
-                preset: Aura
+    provideAnimationsAsync(),
+      providePrimeNG({
+        theme: {
+            preset: Aura
             }
-        })
+      }),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
