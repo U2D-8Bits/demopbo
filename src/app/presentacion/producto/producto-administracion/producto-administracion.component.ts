@@ -1,28 +1,39 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductoInteractor } from '../../../infraestructura/producto/interactors/producto.interactor';
+
+import { TableModule } from 'primeng/table';
+import { CommonModule } from '@angular/common';
 import { ProductoModel } from '../../../dominio/producto/models/producto.model';
+import { ProductoAdapter } from '../../../infraestructura/producto/adapters/producto.adapter';
+import { ProductoInteractor } from '../../../infraestructura/producto/interactors/producto.interactor';
 
 @Component({
   selector: 'app-producto-administracion',
+  imports: [
+    CommonModule,
+    TableModule
+  ],
   templateUrl: './producto-administracion.component.html',
-  styleUrls: ['./producto-administracion.component.css']
+  styleUrl: './producto-administracion.component.scss'
 })
-export class ProductoAdministracionComponent implements OnInit {
+export class ProductoAdministracionComponent implements OnInit{
+
+  productos: ProductoModel[] = [];
 
   constructor(
     private productoInteractor: ProductoInteractor,
-  ) { }
+  ){}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.cargarProductos();
   }
 
+  cargarProductos() {
 
-  cargarProductos(){
     this.productoInteractor.consultar()
     .subscribe({
       next: (productos: ProductoModel[]) => {
-        console.log('Productos cargados:', productos);
+        this.productos = productos
+        console.log(this.productos)
       },
       error: (error) => {
         console.error('Error al cargar productos:', error);
