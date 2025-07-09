@@ -5,7 +5,7 @@ module.exports = withModuleFederationPlugin({
   name: 'demopbo',
 
   exposes: {
-    './Component': './src\app\app.component.ts',
+    './Component': './src/app/app.component.ts',
   },
 
   shared: {
