@@ -7,6 +7,11 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MainInterceptor } from './core/interceptors/main.interceptor';
 import { DATA_IOC } from './infraestructura/data.ioc';
 
+
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeng/themes/aura';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -21,8 +26,16 @@ import { DATA_IOC } from './infraestructura/data.ioc';
       useClass: MainInterceptor,
       multi: true
     },
-    ...DATA_IOC
+    ...DATA_IOC,
+
+        provideAnimationsAsync(),
+        providePrimeNG({
+            theme: {
+                preset: Aura
+            }
+        })
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

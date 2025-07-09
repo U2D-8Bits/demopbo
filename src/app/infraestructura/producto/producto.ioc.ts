@@ -1,6 +1,6 @@
 import { ProductoService } from "../../aplicacion/producto/services/producto.service"
-import { IProductoRepository } from "../../dominio/productos/repositories/iproducto.repository"
-import { GetConsultarTodoProductosUseCase } from "../../dominio/productos/usecase/get-consultar-todo-producto.usecase"
+import { IProductoRepository } from "../../dominio/producto/repositories/iproducto.repository"
+import { GetConsultarTodoProductosUseCase } from "../../dominio/producto/usecase/get-consultar-todo-producto.usecase"
 import { IProductoAdapter } from "./adapters/iproducto.adapter"
 import { ProductoAdapter } from "./adapters/producto.adapter"
 import { IProductoInteractor } from "./interactors/iproduct.interactor"

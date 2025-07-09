@@ -1,7 +1,7 @@
 import { Observable } from "rxjs";
-import { GetConsultarTodoProductosUseCase } from "../../../dominio/productos/usecase/get-consultar-todo-producto.usecase";
+import { GetConsultarTodoProductosUseCase } from "../../../dominio/producto/usecase/get-consultar-todo-producto.usecase";
 import { IProductoInteractor } from "./iproduct.interactor";
-import { ProductoModel } from "../../../dominio/productos/models/producto.model";
+import { ProductoModel } from "../../../dominio/producto/models/producto.model";
 import { Injectable } from "@angular/core";
 
 @Injectable({

@@ -1,5 +1,5 @@
 import { Observable } from "rxjs";
-import { ProductoModel } from "../../../dominio/productos/models/producto.model";
+import { ProductoModel } from "../../../dominio/producto/models/producto.model";
 
 export abstract class IProductoInteractor {
 

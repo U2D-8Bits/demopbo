@@ -1,9 +1,9 @@
 import {inject, Injectable} from '@angular/core';
-import { IProductoRepository } from '../../../dominio/productos/repositories/iproducto.repository';
-import { IProductoAdapter } from '../../../infraestructura/productos/adapters/iproducto.adapter';
+import { IProductoRepository } from '../../../dominio/producto/repositories/iproducto.repository';
+import { IProductoAdapter } from '../../../infraestructura/producto/adapters/iproducto.adapter';
 import { map, Observable } from 'rxjs';
-import { ProductoModel } from '../../../dominio/productos/models/producto.model';
-import { ProductoEntity } from '../../../infraestructura/productos/entities/producto.entity';
+import { ProductoModel } from '../../../dominio/producto/models/producto.model';
+import { ProductoEntity } from '../../../infraestructura/producto/entities/producto.entity';
 
 @Injectable({
     providedIn: 'root'
