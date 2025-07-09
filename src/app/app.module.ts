@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
-import Aura from '@primeng/themes/aura';
+import Lara from '@primeng/themes/lara';
 
 @NgModule({
   declarations: [
@@ -33,8 +33,8 @@ import Aura from '@primeng/themes/aura';
     provideAnimationsAsync(),
       providePrimeNG({
         theme: {
-            preset: Aura
-            }
+            preset: Lara,
+          }
       }),
     provideHttpClient()
   ],
