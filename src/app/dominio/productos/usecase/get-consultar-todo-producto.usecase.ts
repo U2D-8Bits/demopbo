@@ -4,7 +4,7 @@ import { Observable } from "rxjs";
 import { ProductoModel } from "../models/producto.model";
 import { IProductoRepository } from "../repositories/iproducto.repository";
 
-Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: 'root' })
 export class GetConsultarTodoProductosUseCase implements UseCase<undefined, Observable<ProductoModel[]>>{
 
     constructor(

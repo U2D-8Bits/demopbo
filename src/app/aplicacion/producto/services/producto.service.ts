@@ -5,7 +5,7 @@ import { map, Observable } from 'rxjs';
 import { ProductoModel } from '../../../dominio/productos/models/producto.model';
 import { ProductoEntity } from '../../../infraestructura/productos/entities/producto.entity';
 
-Injectable({
+@Injectable({
     providedIn: 'root'
 })
 export class ProductoService implements IProductoRepository {

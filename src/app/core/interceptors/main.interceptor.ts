@@ -2,7 +2,7 @@ import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from "@angular/c
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 
-Injectable({providedIn: 'root'})
+@Injectable({providedIn: 'root'})
 export class MainInterceptor implements HttpInterceptor {
     constructor(){}
 

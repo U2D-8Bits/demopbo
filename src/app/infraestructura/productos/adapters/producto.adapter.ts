@@ -5,7 +5,7 @@ import { ENVIRONMENTS } from "../../../../environments/environments";
 import { map, Observable } from "rxjs";
 import { ProductoEntity } from "../entities/producto.entity";
 
-Injectable({
+@Injectable({
     providedIn: "root"
 })
 export class ProductoAdapter implements IProductoAdapter {

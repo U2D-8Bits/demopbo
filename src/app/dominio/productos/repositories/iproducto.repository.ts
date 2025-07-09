@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { ProductoModel } from "../models/producto.model";
 import { Observable } from "rxjs";
 
-Injectable({
+@Injectable({
     providedIn: 'root'
 })
 export abstract class IProductoRepository {
