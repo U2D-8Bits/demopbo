@@ -33,8 +33,8 @@ import Lara from '@primeng/themes/lara';
     provideAnimationsAsync(),
       providePrimeNG({
         theme: {
-            preset: Lara,
-          }
+          preset: Lara,
+        }
       }),
     provideHttpClient()
   ],
