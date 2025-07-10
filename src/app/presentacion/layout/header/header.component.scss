@@ -1,0 +1,43 @@
+.cabecera {
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    padding: 0 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        
+        &--enlace {
+            display: inline-block;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        &--imagen {
+            width: 200px;
+            height: auto;
+            max-height: 40px;
+            object-fit: contain;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 16px;
+        
+        &__logo--imagen {
+            width: 150px;
+            max-height: 35px;
+        }
+    }
+}
